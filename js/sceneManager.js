@@ -23,9 +23,7 @@ class SceneManager {
     }
 
     draw(spectrum){
-        for(let i = 0; i < this._scenes.length; i++){
-            this._scenes[i].draw(spectrum);
-        }
+        this._scenes[this._sceneIndex].draw(spectrum);
 
         shader(this._postShader);
 

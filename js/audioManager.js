@@ -1,14 +1,11 @@
 class AudioManager {
     constructor() {
         this._sound = undefined;
-        this._fft = undefined;
-    }
-    load(audioFIlePath) {
-        this._sound = loadSound(audioFIlePath)
+        this._fft = new p5.FFT(0.8, 32);
     }
 
-    init() {
-        this._fft = new p5.FFT(0.8, 32);
+    load(audioFIlePath) {
+        this._sound = loadSound(audioFIlePath)
     }
 
     analyze() {

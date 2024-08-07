@@ -23,6 +23,14 @@ vec2 mosaic(vec2 uv, float n){
     return floor(uv*n)/n;
 }
 
+vec2 grid(vec2 uv,float n){
+    return mod(uv*n,1.);
+}
+
+vec2 zoom(vec2 uv,float factor){
+    return .5+(uv-.5)*factor;
+}
+
 void main(void) {
     vec2 uv = vTexCoord;
 
